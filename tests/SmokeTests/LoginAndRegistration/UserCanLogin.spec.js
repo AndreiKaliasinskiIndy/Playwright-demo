@@ -1,4 +1,4 @@
-jest.setTimeout(30000);
+jest.setTimeout(15000);
 jest.retryTimes(1);
 const {LoginPage} = require ("../../../Pages/LoginPage");
 const testData = require("../../../TestData/TestData.json");
@@ -9,5 +9,10 @@ it("Should login", async () => {
     await loginPage.openLoginPage();
     await loginPage.login(testData.users.user1.Email, testData.users.user1.Password);
     const workSpacePage = new WorkSpacePage(page);
-    await workSpacePage.clickMenuItem("Home");
+    await workSpacePage.clickMenuItem("Home1");
+    
 });
+
+beforeEach(async()=>{
+    await context.clearCookies();
+})
