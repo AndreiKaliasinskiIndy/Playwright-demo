@@ -1,5 +1,5 @@
 jest.setTimeout(15000);
-//jest.retryTimes(1);
+jest.retryTimes(1);
 const {LoginPage} = require ("../../../Pages/LoginPage");
 const testData = require("../../../TestData/TestData.json");
 const {WorkSpacePage} = require ("../../../Pages/WorkSpacePage");
